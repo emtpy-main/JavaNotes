@@ -56,8 +56,8 @@ Now, we trying to guess Integer class
             Integer x = null;
             int y = x; // nullptr exception , bcz -> int y = x.intValue();
     6. how == works internally
-            1. for  object, compares references
-            2. for primitives, compares values.
+            1. for  object, compares references.
+            2. for primitives, compares value.
             Eg :-  int x = 100;
                    int y = 100;
                    System.out.println(x==y); // true;
@@ -77,7 +77,7 @@ if you created for Integer x = 100;
                 => these two gona point to same object(reference) in heap bcz is already cached.
 
 ⭐⭐ generally, Integer from -128 to 127 range , == return true bcz caching optimized technique.
-
+                => System.out.println(x==y); // -> true
 
 
 // =============================== Abstract Class ====================================
@@ -113,3 +113,4 @@ if you created for Integer x = 100;
         - getter/setter    - can have business logic
         - construtor
         - field
+        - no business logic

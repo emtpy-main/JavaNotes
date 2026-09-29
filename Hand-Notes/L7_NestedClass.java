@@ -88,7 +88,7 @@ Type of nested class :-
       
       - static member works that they belong to class/ shared among object.
         but in inner nested class, each inner class associated with outer class object i.e one to one mapping between them.
-        therefore, i create confusion that static member shared among outer class object OR each inner class object have separate static member.
+        therefore, it create confusion that static member shared among outer class object OR each inner class object have separate static member.
         to avoid it java restricted that static member in inner class can created with static class.
         we now further now newer java solve this problem.
 

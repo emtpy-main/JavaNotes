@@ -1,4 +1,4 @@
-# ============= Encapsulation 
+# ============= Encapsulation ==========================
 
 ## 1. Overview
 

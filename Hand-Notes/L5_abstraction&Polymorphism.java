@@ -32,7 +32,7 @@ Rules :-
 
     -> here, C reference variable tightly coupled with start(), acclerate(), brake(). 
     -> What , How are tightly coupled.
-    -> like if we have two electric and fuel car then, for each we have to write two Class class 
+    -> like if we have two car electric and fuel car then, for each we have to write two Class class 
         a. electric car class
         b. fuel car class
     -> based on usage, we have to create different obj of each class.
@@ -60,7 +60,7 @@ Points :-
     3. abstract class can have concreate class also.
     4. abstract class  can not have object bcz it abstract method can't execute.
     5. child class extends abstract class and provide implementation of abstract methods.
-    6. @override annotation for better pratices.
+    6. @Override annotation for better pratices.
 
     Example :-
         abstract public class Car{
@@ -85,10 +85,11 @@ Points :-
 Points :-
     1. using inteface keyword.
     2. all methods are abstract method, but no need to used abstract keyword.
-    3. new java, allows default method in interfaces.
+    3. new java, allows default,private,static method in interfaces.
 
 
-⭐⭐ => all rule about visibility of method in child class during override method and parameter and return types.
+⭐⭐ => all rule about visibility(access modifier) of method in child class during override method and parameter and return types.
+    -> subclass method never narrow down acces modifier of super.
 
 ### abstration v/s   encapsulation
 

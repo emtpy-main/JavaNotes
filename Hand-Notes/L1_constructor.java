@@ -1,11 +1,11 @@
 // constructor's Notes
 
- => class variable = instance values
+ => class variable !== instance values
 
 // == properties
  1. constructor are called automatically whenever object are created.
  2. every class provide default constructor if not created, if created then default constructor not created
- 3. class have instance variable with default values
+ 3. class have instance variable with default values but local variable have not default instanization./
  4. parameterized constructor.
  5. constructor are overloaded.
  6. copy constructor.
