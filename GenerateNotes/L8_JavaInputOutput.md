@@ -1750,3 +1750,69 @@ And the most important flow:
 ```
 
 This gives you a much stronger foundation for the next topics: **File I/O, `FileInputStream`/`FileOutputStream`, `FileReader`/`FileWriter`, buffering, serialization, and NIO (`Path`, `Files`, `Channels`, `Buffers`)**.
+
+
+# Imporant Correction notes after Reading :-
+
+### println() MYTH :-
+```java
+// =============== null + println() + toString() =================
+
+⭕ Important :-
+    -> Having a null reference does NOT always cause NullPointerException.
+    -> NPE occurs when we try to perform an operation / call method on null.
+
+    String s = null;
+
+    System.out.println(s);        // ✅ prints: null
+    System.out.println(s.toString()); // ❌ NullPointerException
+
+
+⭕ Why println(null) does NOT give NPE?
+    -> println() handles null safely.
+    -> It does NOT call toString() on a null reference.
+
+    System.out.println(s);
+
+        null
+         ↓
+    println receives null
+         ↓
+    prints "null"
+
+
+⭕ But toString() :-
+    s.toString();
+
+        s → null
+        ↓
+    null.toString()
+        ↓
+    ❌ NullPointerException
+
+
+⭕ String.valueOf() is also null-safe :-
+
+    String.valueOf(null);   // returns "null"
+
+    System.out.println(String.valueOf(null)); // prints null
+
+
+// =============== TreeMap + null ===============================
+
+TreeMap<Integer, String> map = new TreeMap<>();
+
+map.put(10, null);          // ✅ null VALUE allowed
+System.out.println(map.get(10)); // prints null
+
+map.put(null, "Hello");     // ❌ NullPointerException
+                             // TreeMap does not allow null KEY
+
+
+⭕ Quick Rule :-
+
+    null value + println()       → ✅ prints "null"
+    null reference + toString()  → ❌ NPE
+    TreeMap null VALUE            → ✅ allowed
+    TreeMap null KEY              → ❌ not allowed
+```
